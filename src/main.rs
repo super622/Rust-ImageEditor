@@ -1,0 +1,14 @@
+#![forbid(unsafe_code)]
+#![cfg_attr(not(debug_assertions), deny(warnings))] // Forbid warnings in release builds
+#![warn(clippy::all, rust_2018_idioms)]
+
+// When compiling natively:
+#[cfg(not(target_arch = "wasm32"))]
+fn main() {
+    let app = image_editor::ImageEditor::default();
+    let native_options = eframe::NativeOptions{
+                drag_and_drop_support: true,
+                ..Default::default()
+            };//default()
+    eframe::run_native(Box::new(app), native_options);
+}
