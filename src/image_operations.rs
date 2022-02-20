@@ -24,8 +24,8 @@ impl ImageOperations{
     pub fn load_image_from_path(&mut self, path: &std::path::Path, frame: &epi::Frame) {
 
         let result = match image::io::Reader::open(path){
-            Ok(result) => {
-                self.image_data = Some(result.decode().unwrap());
+            Ok(img) => {
+                self.image_data = Some(img.decode().unwrap());
                 let dimensions = [self.image_data.as_ref().unwrap().dimensions().0 as usize, self.image_data.as_ref().unwrap().dimensions().1 as usize];
                 let image_buffer = self.image_data.as_ref().unwrap().to_rgba8();
                 let pixel = image_buffer.as_flat_samples();

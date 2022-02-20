@@ -1,4 +1,4 @@
-use image::{imageops::FilterType};
+use image::imageops::FilterType;
 
 #[derive(PartialEq)]
 pub struct Settings {
@@ -31,8 +31,8 @@ impl Default for Settings{
             filter_type: FilterType::Triangle,
             x: 0, 
             y: 0, 
-            width: 0, 
-            height: 0,
+            width: 1, 
+            height: 1,
         }
     }
 }

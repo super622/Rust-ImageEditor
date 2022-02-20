@@ -20,15 +20,7 @@ pub struct ImageEditor {
     flip_v: egui::TextureId,
     flip_h: egui::TextureId,
 }
- 
-// impl ImageEditor{
-//     fn flip_v_id(&mut self,path: &std::path::Path, frame: &epi::Frame){
-//         self.flip_v = load_image(path,frame);
-//     }
-//     fn flip_h_id(&mut self,path: &std::path::Path, frame: &epi::Frame){
-//         self.flip_h = load_image(path,frame);
-//     }
-// } 
+
 
 impl epi::App for ImageEditor {
     fn name(&self) -> &str {
