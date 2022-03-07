@@ -1,7 +1,7 @@
 # ImageEditor
 A project made for the FMI Rust Programming course. The purporse of it was to make basic image editor using eframe (egui framework) which gives us egui, epi and web+native backends. 
 
-![](https://github.com/nadezhda1120/ImageEditor/blob/main/ImageEditor_demo.mp4)
+![](https://github.com/nadezhda1120/ImageEditor/blob/main/ImageEditor_demo.mp4?raw=true)
 
 ## Roadmap
 
