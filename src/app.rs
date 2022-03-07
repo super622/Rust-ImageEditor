@@ -64,8 +64,8 @@ impl epi::App for ImageEditor {
         if let Some(storage) = _storage {
             *self = epi::get_value(storage, epi::APP_KEY).unwrap_or_default()
         }
-        self.flip_v = load_image(Path::new("C:/Users/User/GitProjects/image_editor/docs/flip_vertical.png"),frame);
-        self.flip_h = load_image(Path::new("C:/Users/User/GitProjects/image_editor/docs/flip-h.png"),frame);
+        self.flip_v = load_image(Path::new("./docs/flip_vertical.png"),frame);
+        self.flip_h = load_image(Path::new("./docs/flip-h.png"),frame);
     }
     
 
