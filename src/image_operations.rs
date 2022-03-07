@@ -23,7 +23,7 @@ impl ImageOperations{
 
     pub fn load_image_from_path(&mut self, path: &std::path::Path, frame: &epi::Frame) {
 
-        let result = match image::io::Reader::open(path){
+        match image::io::Reader::open(path){
             Ok(img) => {
                 self.image_data = Some(img.decode().unwrap());
                 let dimensions = [self.image_data.as_ref().unwrap().dimensions().0 as usize, self.image_data.as_ref().unwrap().dimensions().1 as usize];
