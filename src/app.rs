@@ -298,8 +298,7 @@ impl epi::App for ImageEditor {
  
             
             if let Some(img) = self.image_operations.image_data.as_mut(){
-                ui.image(self.image_operations.texture_id,[self.image_operations.image_data.as_ref().unwrap().dimensions().0 as f32, 
-                self.image_operations.image_data.as_ref().unwrap().dimensions().1 as f32]);
+                ui.image(self.image_operations.texture_id,[img.dimensions().0 as f32, img.dimensions().1 as f32]);
                 
             }
  
@@ -324,7 +323,7 @@ impl epi::App for ImageEditor {
 
 fn load_image(path: &std::path::Path, frame: &epi::Frame) -> egui::TextureId{
 
-    let result = match image::io::Reader::open(path){
+    match image::io::Reader::open(path){
         Ok(result) => {
             let image= result.decode().unwrap();
             let dimensions = [image.dimensions().0 as usize, image.dimensions().1 as usize];
