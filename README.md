@@ -3,4 +3,4 @@ A project made for the FMI Rust Programming course. The purporse of it was to ma
 
 ## Roadmap
 
-To see the roadmap and what's been implemented as well as future plans go to the [Roadmap](https://github.com/nadezhda1120/ImageEditor/projects/1).
+To see the roadmap and what's been implemented as well as future plans go to the [Roadmap](https://github.com/users/nadezhda1120/projects/2).
